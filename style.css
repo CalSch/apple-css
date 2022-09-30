@@ -1,0 +1,81 @@
+html,body {
+	background-color: black;
+	padding:5px;
+}
+
+* {
+	font-family: 'Ubuntu', sans-serif;
+	color: white;
+}
+
+.menu {
+	/* border: 1px grey solid; */
+	/* padding: -10px; */
+	border-radius: 10px;
+	width: fit-content;
+	/* background-color: rgb(47, 40, 70); */
+}
+
+.menu .item {
+	position: relative;
+	background-color: rgb(47, 40, 70);
+	list-style-type: none;
+	padding:0px 10px;
+	padding-top:2px;
+	border-left: 1px grey solid;
+	border-right: 1px grey solid;
+	width: 100%;
+	cursor:pointer;
+}
+.menu .item::after {
+	content: "";
+	/* position: relative;
+	top:1px; */
+	display: block;
+	border-bottom: 1px grey solid;
+	margin-top:3px;
+}
+.menu .item:hover {
+	background-color: rgb(63, 54, 93);
+}
+
+.menu .item:first-child {
+	border-radius: 10px 10px 0 0;
+	border-top: 1px grey solid;
+}
+.menu .item:last-child {
+	border-radius: 0px 0px 10px 10px;
+	border-bottom: 1px grey solid;
+}
+.menu .item:last-child::after {
+	border: none;
+}
+.menu .seperator + .item {
+	border-top: 1px grey solid;
+	position: relative;
+	/* top:-3px; */
+}
+
+
+.menu .before-seperator::after {
+	/* display: none; */
+	/* border-bottom: none !important; */
+	/* background-color: red; */
+	border-bottom: none !important;
+	background-color: rgb(47, 40, 70);
+}
+
+
+.menu .title {
+	font-weight: bold;
+	cursor:default;
+	padding-top:5px;
+}
+/* .menu .seperator {
+	position: relative;
+	left:-5px;
+	border-top: 1px grey solid;
+	margin: 10px 0;
+	width: calc(100% + 10px);
+	display: block;
+} */
